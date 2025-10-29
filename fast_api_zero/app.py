@@ -4,9 +4,9 @@ from fastapi import FastAPI
 
 from fast_api_zero.schemas import Message
 
-app = FastAPI()
+app = FastAPI(title="Minha primeira API em Python")
 
 
-@app.get('/', status_code=HTTPStatus.OK, response_model=Message)
+@app.get("/", status_code=HTTPStatus.OK, response_model=Message)
 def read_root():
-    return {'message': 'Olá Mundo'}
+    return {"message": "Olá Mundo"}
